@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Página</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="/assets/logo.png" alt="Logo">
+    </div>
+
+    <!-- Menu -->
+    <nav>
+        <ul>
+            <li><a href="#">Mandala Ikigai</a></li>
+            <li><a href="#">Meu Ikigai</a></li>
+            <li><a href="#">Menu Item 3</a></li>
+        </ul>
+    </nav>
+
+    <!-- Título destacado com imagem de fundo -->
+    <section class="destaque">
+        <h1>Mandala Ikigai</h1>
+        <div class="imagem-fundo"></div>
+        <div class="texto">
+            <p>A Mandala Ikigai é uma representação gráfica que combina elementos da mandala e do conceito japonês de
+                Ikigai,
+                que significa "razão de ser" ou "propósito de vida". Ela ajuda a identificar e visualizar as áreas de
+                paixão,
+                vocação, profissão e missão, buscando o equilíbrio e a realização pessoal.</p>
+        </div>
+        <!-- Botão para iniciar -->
+        <button id="iniciar">Iniciar meu Ikigai</button>
+    </section>
+
+    <!-- Divs para os círculos da mandala -->
+    <section class="ikigai">
+        <div class="container">
+            <div id="circuloSuperior" class="circulo">
+                <div class="palavra p1">Paixão</div>
+            </div>
+            <div id="circuloEsquerdo" class="circulo">
+                <div class="palavra p2">Profissão</div>
+            </div>
+            <div id="circuloDireito" class="circulo">
+                <div class="palavra p3">Vocação</div>
+            </div>
+            <div id="circuloInferior" class="circulo">
+                <div class="palavra p4">Missão</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de imagens -->
+    <section class="galeria">
+        <div class="imagem">
+            <img src="/assets/amofazer.jpg" alt="Descrição da imagem 1">
+            <h1>O que amo fazer:</h1>
+            <p>nesse quadrante, você deve colocar a sua motivação mais profunda, sua paixão.</p>
+        </div>
+        <div class="imagem">
+            <img src="/assets/o que posso.jpg" alt="Descrição da imagem 2">
+            <h1>O que posso fazer bem:</h1>
+            <p>nessa parte, lembre sobre o que você é bom, pontos fortes, o que outros valorizam em você.</p>
+        </div>
+        <div class="imagem">
+            <img src="/assets/serpago.jpg" alt="Descrição da imagem 3">
+            <h1>O que posso ser pago para fazer:</h1>
+            <p>nesse quadrante, pense na profissão que está alinhada com as respostas anteriores, no que você faz bem e
+                que outros estão dispostos a pagar.</p>
+        </div>
+        <div class="imagem">
+            <img src="/assets/mundoprecisa.jpg" alt="Descrição da imagem 3">
+            <h1>O que o mundo precisa:</h1>
+            <p>nessa parte, pense sobre sua missão na Terra, no que você pode agregar ao mundo.
+            </p>
+        </div>
+    </section>
+
+    <!-- Vídeo -->
+    <section class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/77vqMkV2QT0?si=-Glyhre-vAa9CfnU"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </section>
+
+    <!-- Mapa de localização -->
+    <section class="mapa">
+        <!-- Inserir mapa aqui usando Google Maps API ou outra ferramenta -->
+    </section>
+
+    <!-- Formulário de cadastro -->
+    <section class="formulario">
+        <form action="processar_formulario.php" method="post">
+            <input type="text" name="nome" placeholder="Nome">
+            <input type="email" name="email" placeholder="Email">
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Criado por ❤ Priscilla Trevizan</p>
+    </footer>
+
+    <!-- Script JS para gerar mandala -->
+    <script src="/script.js"></script>
+</body>
+
+</html>
