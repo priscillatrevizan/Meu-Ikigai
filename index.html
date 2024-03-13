@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sua Página</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 
 <body>
@@ -17,14 +19,14 @@
     <!-- Menu -->
     <nav>
         <ul>
-            <li><a href="#">Mandala Ikigai</a></li>
-            <li><a href="#">Meu Ikigai</a></li>
-            <li><a href="#">Menu Item 3</a></li>
+            <li><a href="#destaque">Mandala Ikigai</a></li>
+            <li><a href="#ikigai">Meu Ikigai</a></li>
+            <li><a href="#video">Saber mais</a></li>
         </ul>
     </nav>
 
     <!-- Título destacado com imagem de fundo -->
-    <section class="destaque">
+    <section id="destaque">
         <h1>Mandala Ikigai</h1>
         <div class="imagem-fundo"></div>
         <div class="texto">
@@ -39,7 +41,7 @@
     </section>
 
     <!-- Divs para os círculos da mandala -->
-    <section class="ikigai">
+    <section id="ikigai">
         <div class="container">
             <div id="circuloSuperior" class="circulo">
                 <div class="palavra p1">Paixão</div>
@@ -83,7 +85,7 @@
     </section>
 
     <!-- Vídeo -->
-    <section class="video">
+    <section id="video">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/77vqMkV2QT0?si=-Glyhre-vAa9CfnU"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -92,7 +94,7 @@
 
     <!-- Mapa de localização -->
     <section class="mapa">
-        <!-- Inserir mapa aqui usando Google Maps API ou outra ferramenta -->
+        <div id="map"></div>
     </section>
 
     <!-- Formulário de cadastro -->
@@ -111,6 +113,10 @@
 
     <!-- Script JS para gerar mandala -->
     <script src="/script.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="/mapa.js"></script>
 </body>
 
 </html>

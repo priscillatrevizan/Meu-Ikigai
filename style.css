@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Madimi+One&family=Open+Sans:ital, wght@0.300..800;1.300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+body {
+  background-color: #f2e3fc;
+}
+
 /* Estilos para o logo */
 .logo {
   text-align: center;
@@ -14,9 +19,12 @@
 nav ul {
   list-style-type: none;
   text-align: center;
-  font-family: "Exo 2", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
+  background-color: rgba(250, 248, 248, 0.35);
+  padding: 20px;
+  border-radius: 50px;
 }
 
 nav ul li {
@@ -27,7 +35,8 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #621091;
-  font-weight: 800;
+  font-weight: 600;
+  background-color: rgba(250, 248, 248, 0.35);
 }
 
 nav ul li a:hover {
@@ -38,7 +47,7 @@ nav ul li a:hover {
 }
 
 /* Estilos para o título destacado */
-.destaque {
+#destaque {
   padding: 100px;
   max-height: 800px;
   position: relative;
@@ -62,33 +71,49 @@ nav ul li a:hover {
   }
 }
 
-.destaque h1 {
+#destaque h1 {
   color: #8919ca;
   text-align: left;
-  margin-left: 40%;
+  margin-left: 41%;
   font-family: "Exo 2", sans-serif;
   font-weight: 800;
 }
 
-.destaque p {
-  margin-left: 40%;
+#destaque p {
+  margin-left: 41%;
   text-align: left;
   color: rgb(27, 27, 27);
   font-family: "Open Sans", sans-serif;
+  background-color: #e4bcfc;
+  padding: 20px;
+  border-radius: 6px;
 }
 
-.destaque button {
-  margin-left: 40%;
+#destaque button {
+  margin-left: 41%;
+}
+/* Estilos para o botão */
+button {
+  font-size: 16px;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  padding: 12px 20px;
+  background-color: #8919ca;
+  border-radius: 12px;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
-  .destaque {
+  #destaque {
     position: relative;
     margin: 0;
   }
 
-  .destaque p,
-  .destaque h1 {
+  #destaque p,
+  #destaque h1 {
     text-align: center;
     align-items: center;
     width: 100%;
@@ -96,43 +121,25 @@ nav ul li a:hover {
     margin: 0;
   }
 
-  .destaque button {
+  #destaque button {
     display: block;
-    margin: 20px auto;
-    text-align: center;
-    padding: 10px 20px;
-    white-space: nowrap;
+    margin: 20px auto; /* Centraliza o botão horizontalmente e adiciona margem superior e inferior */
+    padding: 12px 20px;
+    background-color: #8919ca;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    cursor: pointer;
   }
 }
 
-.ikigai .container {
+#ikigai .container {
   margin-top: 300px;
   margin-bottom: 200px;
   position: relative;
   margin: 0 auto;
   max-width: 800px;
   padding: 20px;
-}
-
-/* Estilos para o trecho de texto */
-.trecho {
-  position: relative;
-  margin: 50px;
-  background-color: #f0f0f0;
-  padding: 20px;
-}
-
-/* Estilos para o botão */
-button {
-  font-size: 18px;
-  position: relative;
-  margin: 100px;
-  padding: 20px 40px;
-  background-color: #8919ca;
-  border-radius: 12px;
-  color: white;
-  border: none;
-  cursor: pointer;
 }
 
 /* Estilos para a galeria de imagens */
@@ -170,10 +177,14 @@ button {
   color: #8919ca;
 }
 
+.imagem p {
+  font-family: "Open Sans", sans-serif;
+}
+
 /* Estilos para o vídeo */
-.video {
+#video {
   text-align: center;
-  margin-top: 600px;
+  margin-top: 400px;
 }
 
 /* Estilos para o mapa */
@@ -193,22 +204,19 @@ button {
   width: 300px; /* Ajuste conforme necessário */
   margin-bottom: 10px;
   padding: 10px;
+  border-color: #510280;
+  border-radius: 6px;
 }
 
 .formulario input[type="submit"] {
+  font-size: 16px;
+  position: relative;
+  padding: 12px 20px;
   background-color: #8919ca;
+  border-radius: 12px;
   color: white;
   border: none;
-  padding: 10px 20px;
   cursor: pointer;
-}
-
-/* Estilos para o rodapé */
-footer {
-  text-align: center;
-  margin-top: 50px;
-  padding: 20px;
-  background-color: #f0f0f0;
 }
 
 /* Estilos para os círculos */
@@ -216,8 +224,9 @@ footer {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 2px solid rgb(107, 3, 107);
   position: absolute;
+  background-color: rgba(250, 248, 248, 0.35);
 }
 
 #circuloSuperior {
@@ -281,10 +290,10 @@ footer {
 .resposta2,
 .resposta3,
 .resposta4 {
-  width: 80%; /* Ajuste conforme necessário */
+  width: 80%;
   position: absolute;
   transform: translate(-50%, -50%);
-  text-align: left; /* ou outro alinhamento desejado */
+  text-align: left;
 }
 .resposta1 {
   top: 25%;
@@ -310,12 +319,23 @@ footer {
   color: #510280;
 }
 
-/* Estilos para o centro */
 #centro {
   position: absolute;
-  top: 50%; /* 50% da altura do contêiner pai */
-  left: 50%; /* 50% da largura do contêiner pai */
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 24px; /* Ajuste conforme necessário */
-  color: black; /* Ajuste conforme necessário */
+  font-size: 24px;
+  color: black;
+}
+
+#map {
+  height: 400px;
+}
+
+/* Estilos para o rodapé */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f0f0f0;
 }
