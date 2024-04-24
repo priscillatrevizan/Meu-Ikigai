@@ -4,16 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Página</title>
+    <title>SMeu Ikigai</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <meta name="description" content="Página sobre Mandala Ikigai">
+    <meta name="keywords" content="mandala, ikigai, propósito de vida, equilíbrio pessoal">
+
+</head>
 </head>
 
 <body>
     <!-- Logo -->
     <div class="logo">
-        <img src="/assets/logo.png" alt="Logo">
+        <img src="/assets/logo.png" alt="Logo da página">
     </div>
 
     <!-- Menu -->
@@ -43,45 +48,61 @@
     <!-- Divs para os círculos da mandala -->
     <section id="ikigai">
         <div class="container">
-            <div id="circuloSuperior" class="circulo">
-                <div class="palavra p1">Paixão</div>
-            </div>
-            <div id="circuloEsquerdo" class="circulo">
-                <div class="palavra p2">Profissão</div>
-            </div>
-            <div id="circuloDireito" class="circulo">
-                <div class="palavra p3">Vocação</div>
-            </div>
-            <div id="circuloInferior" class="circulo">
-                <div class="palavra p4">Missão</div>
-            </div>
+            <article id="circuloSuperior" class="circulo" role="region" aria-label="Círculo da Paixão">
+                <h2 class="palavra p1">Paixão</h2>
+            </article>
+            <article id="circuloEsquerdo" class="circulo" role="region" aria-label="Círculo da Profissão">
+                <h2 class="palavra p2">Profissão</h2>
+            </article>
+            <article id="circuloDireito" class="circulo" role="region" aria-label="Círculo da Vocação">
+                <h2 class="palavra p3">Vocação </h2>
+            </article>
+            <article id="circuloInferior" class="circulo" role="region" aria-label="Círculo da Missão">
+                <h2 class="palavra p4">Missão</h2>
+            </article>
         </div>
     </section>
 
     <!-- Galeria de imagens -->
     <section class="galeria">
-        <div class="imagem">
-            <img src="/assets/amofazer.jpg" alt="Descrição da imagem 1">
-            <h1>O que amo fazer:</h1>
+        <figure class="imagem">
+            <img src="/assets/amofazer.jpg" alt="Descrição da imagem 1" usemap="#amofazer">
+            <figcaption>O que amo fazer:</figcaption>
             <p>nesse quadrante, você deve colocar a sua motivação mais profunda, sua paixão.</p>
-        </div>
-        <div class="imagem">
-            <img src="/assets/o que posso.jpg" alt="Descrição da imagem 2">
-            <h1>O que posso fazer bem:</h1>
+        </figure>
+        <map name="amofazer">
+            <area shape="rect" coords="0,0,200,150" alt="Área 1" href="#">
+        </map>
+
+        <figure class="imagem">
+            <img src="/assets/o que posso.jpg" alt="Descrição da imagem 2" usemap="#oqueposso">
+            <figcaption>O que posso fazer bem:</figcaption>
             <p>nessa parte, lembre sobre o que você é bom, pontos fortes, o que outros valorizam em você.</p>
-        </div>
-        <div class="imagem">
-            <img src="/assets/serpago.jpg" alt="Descrição da imagem 3">
-            <h1>O que posso ser pago para fazer:</h1>
+        </figure>
+        <map name="oqueposso">
+            <area shape="rect" coords="0,0,200,150" alt="Área 2" href="#">
+        </map>
+
+        <figure class="imagem">
+            <img src="/assets/serpago.jpg" alt="Descrição da imagem 3" usemap="#serpago">
+            <figcaption>O que posso ser pago para fazer:</figcaption>
             <p>nesse quadrante, pense na profissão que está alinhada com as respostas anteriores, no que você faz bem e
                 que outros estão dispostos a pagar.</p>
-        </div>
-        <div class="imagem">
-            <img src="/assets/mundoprecisa.jpg" alt="Descrição da imagem 3">
-            <h1>O que o mundo precisa:</h1>
+        </figure>
+        <map name="serpago">
+            <area shape="rect" coords="0,0,200,150" alt="Área 3" href="#">
+        </map>
+
+        <figure class="imagem">
+            <img src="/assets/mundoprecisa.jpg" alt="Descrição da imagem 3" usemap="#omundoprecisa">
+            <figcaption>O que o mundo precisa:</figcaption>
             <p>nessa parte, pense sobre sua missão na Terra, no que você pode agregar ao mundo.
             </p>
-        </div>
+        </figure>
+        <map name="mundoprecisa">
+            <area shape="rect" coords="0,0,200,150" alt="Área 4" href="#">
+        </map>
+
     </section>
 
     <!-- Vídeo -->
@@ -94,14 +115,16 @@
 
     <!-- Mapa de localização -->
     <section class="mapa">
-        <div id="map"></div>
+        <div id="map" role="application" aria-label="Mapa de localização"></div>
     </section>
 
     <!-- Formulário de cadastro -->
     <section class="formulario">
         <form action="processar_formulario.php" method="post">
-            <input type="text" name="nome" placeholder="Nome">
-            <input type="email" name="email" placeholder="Email">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
             <input type="submit" value="Enviar">
         </form>
     </section>
